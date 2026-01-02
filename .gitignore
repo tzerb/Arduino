@@ -1,70 +1,74 @@
-app/bin/
-app/pde.jar
-build/macosx/work/
-arduino-core/bin/
-arduino-core/arduino-core.jar
-hardware/arduino/bootloaders/caterina_LUFA/Descriptors.o
-hardware/arduino/bootloaders/caterina_LUFA/Descriptors.lst
-hardware/arduino/bootloaders/caterina_LUFA/Caterina.sym
-hardware/arduino/bootloaders/caterina_LUFA/Caterina.o
-hardware/arduino/bootloaders/caterina_LUFA/Caterina.map
-hardware/arduino/bootloaders/caterina_LUFA/Caterina.lst
-hardware/arduino/bootloaders/caterina_LUFA/Caterina.lss
-hardware/arduino/bootloaders/caterina_LUFA/Caterina.elf
-hardware/arduino/bootloaders/caterina_LUFA/Caterina.eep
-hardware/arduino/bootloaders/caterina_LUFA/.dep/
-build/*.zip
-build/*.tar.bz2
-build/windows/work/
-build/windows/*.zip
-build/windows/*.tgz
-build/windows/*.tar.bz2
-build/windows/libastylej*
-build/windows/liblistSerials*
-build/windows/arduino-*.zip
-build/windows/dist/*.tar.gz
-build/windows/dist/*.tar.bz2
-build/windows/launch4j-*.tgz
-build/windows/launch4j-*.zip
-build/windows/launcher/launch4j
-build/windows/WinAVR-*.zip
-build/macosx/arduino-*.zip
-build/macosx/dist/*.tar.gz
-build/macosx/dist/*.tar.bz2
-build/macosx/*.tar.bz2
-build/macosx/libastylej*
-build/macosx/appbundler*.jar
-build/macosx/appbundler*.zip
-build/macosx/appbundler
-build/macosx/appbundler-1.0ea-arduino?
-build/macosx/appbundler-1.0ea-arduino*.zip
-build/macosx/appbundler-1.0ea-upstream*.zip
-build/linux/work/
-build/linux/dist/*.tar.gz
-build/linux/dist/*.tar.bz2
-build/linux/*.tgz
-build/linux/*.tar.xz
-build/linux/*.tar.bz2
-build/linux/*.zip
-build/linux/libastylej*
-build/linux/liblistSerials*
-build/shared/arduino-examples*
-build/shared/reference*.zip
-build/shared/Edison*.zip
-build/shared/Galileo*.zip
-build/shared/WiFi101-Updater-ArduinoIDE-Plugin*.zip
-test-bin
-*.iml
-.idea
-.DS_Store
-.directory
-hardware/arduino/avr/libraries/Bridge/examples/XivelyClient/passwords.h
-avr-toolchain-*.zip
-/app/nbproject/private/
-/arduino-core/nbproject/private/
-/app/build/
-/arduino-core/build/
+# --- Build Artifacts and Compilation Outputs ---
+# These are files generated during the build process and should not be tracked.
+# The standard Arduino IDE puts these in a temporary build location, but
+# other tools like PlatformIO or Arduino-Makefile might create them in
+# the project directory or specific build folders.
+build/
+*.bin
+*.elf
+*.hex
+*.lst
+*.map
+*.eep
+*.sym
+*.o
+*.d
+*.su
 
-manifest.mf
-nbbuild.xml
-nbproject
+# --- IDE and Editor Specific Files ---
+# Various development environments create hidden or temporary files for
+# internal settings, workspace management, or caching. These are personal
+# to your local setup and should not be shared across different machines
+# or collaborators.
+# Arduino IDE 1.x and 2.x files
+.arduino/
+.arduinocli/
+arduino-ide-log.txt
+*.lss
+
+# VS Code specific files (if you use the Arduino or PlatformIO extensions)
+.vscode/
+.cache/
+.tode/
+.ino.uso
+.vc.db
+*.vsarduino.h
+.ion/
+
+# PlatformIO specific files (if using PlatformIO)
+.pio/
+.pioenvs/
+.piolibs/
+
+# Atmel Studio / Visual Micro specific files
+_vm/
+*.aps
+*.user
+*.configuser
+*.cproj.user
+
+# General OS and Editor files
+.DS_Store # macOS specific file for folder settings
+Thumbs.db # Windows specific file for image thumbnails
+ehthumbs.db # Windows
+.directory # Linux/KDE specific file
+*.swp # Vim swap files
+*~ # Backup files created by many text editors
+
+# --- Project-Specific Configuration Files ---
+# Configuration files generated automatically that do not belong in version control.
+# `sdkconfig` is an example for ESP32 projects which is often generated from
+# a default but should not be committed if it changes frequently during builds.
+sdkconfig
+sdkconfig.old
+# For library development, sometimes example passwords need ignoring
+passwords.h
+
+# --- Other potentially ignored files ---
+# Depending on your specific workflow, you might also want to ignore:
+# Libraries you download manually (if using Git submodules or PlatformIO for management instead)
+# lib/
+# libraries/
+
+# Executable binaries if you are building CLI tools alongside your project
+# *.exe
