@@ -8,6 +8,10 @@ A collection of Arduino projects and code snippets that I want to keep and refer
 
 A light strip controller project using the ATtiny85 microcontroller.
 
+### Stepper
+
+Simple stepper tests for use in future projects.
+
 **Features:**
 
 - Compact design using ATtiny85
