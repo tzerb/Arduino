@@ -1,3 +1,7 @@
+/*
+C:\Users\tzerb\AppData\Local\Arduino15\packages\arduino\tools\avrdude\6.3.0-arduino17\bin>avrdude -c arduino -C C:\Users\tzerb\AppData\Local\Arduino15\packages\arduino\tools\avrdude\6.3.0-arduino17\etc\avrdude.conf -p t85 -v -P COM7 -b 19200
+*/
+
 #define LED_PIN 0
 #define NUM_LEDS 300
 #define LED_BUILTIN 1
@@ -72,6 +76,14 @@ void loop() {
   delay(1000);
   digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on
     
+  setAllLEDs(255, 255, 255, 0);
+  delay(1000);
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on
+
+  setAllLEDs(127, 127, 127, 0);
+  delay(1000);
+  digitalWrite(LED_BUILTIN, LOW);   // turn the LED on'
+
   // Warm white (using W channel)
   setAllLEDs(0, 0, 0, 127);
   delay(1000);
